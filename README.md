@@ -29,3 +29,14 @@ About => /about
 ## 3 - Points clés
  - Pas besoin de gérer l'abonnement et le désabonnement grâce au | async
  - Le BehaviorSubject stocke et renvoi la dernière valeur qu'il a reçu
+
+# Sequence 3
+
+## Lazy loading
+
+Le lazy loading permet de venir charger des bouts de l'application 
+uniquement au moment ou nous devons y accéder. Pour ce faire on peut soit passer par 
+loadComponent afin de charger un component de façon asynchrone, si une route à aussi des enfants
+ici dans l'exemple les tasks on peut utiliser loadChildren, ici on va chercher un fichier de routes
+intégrer au niveau du composant puis on injecte ces routes dans le main router de façon asynchrone au besoin.
+
