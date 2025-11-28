@@ -1,28 +1,7 @@
-<div>
-  <h2 class="text-2xl">Listes des tâches</h2>
-
-  @if(tasks | async; as tasks) {
-    <div class="flex gap-4">
-      @for (task of tasks; track task.id) {
-        <div class="p-6 bg-stone-100 w-1/2 shadow rounded">
-          <p>Id : {{ task.id }}</p>
-          <p>Label : {{ task.label }}</p>
-        </div>
-      }
-    </div>
-  } @else {
-    <p>Chargement en cours...</p>
-  }
-
-  <h3 class="text-xl">Actions</h3>
-  <div>
-    <p>Ajouter une tâche</p>
-    <input [(ngModel)]="newTaskLabel" type="text" placeholder="Label de la tâche">
-    <button
-      class="bg-zinc-100 border rounded cursor-pointer"
-      (click)="taskService.addTask(newTaskLabel)"
-    >
-      Ajouter
-    </button>
-  </div>
+<div class="p-8">
+  <h2 class="text-xl">Accueil</h2>
+  <p>
+    Vous pouvez retrouver la liste des tâche
+    <a routerLink="tasks" class="text-blue-700">Vos tâches</a>
+  </p>
 </div>
